@@ -23,7 +23,12 @@ const profileIcon = document.querySelector('[data-js=profile-icon]')
 const bookmarkIcon = document.querySelector('[data-js=bookmark-icon')
 
 const answer = document.querySelector('[data-js=answer]')
-const answerButton = document.querySelector('[data-js=answer-button]')
+
+const formField = document.querySelector('textarea')
+const submitButton = document.querySelector('[data-js=submit-button]')
+
+const showButton = document.querySelector('[data-js=show-button]')
+const hideButton = document.querySelector('[data-js=hide-button]')
 
 homeNav.addEventListener('click', () => {
   bookmarks.classList.add('d-none')
@@ -60,21 +65,32 @@ bookMarkNav.addEventListener('click', () => {
 })
 
 createNav.addEventListener('click', () => {
-  create.classList.remove('d-none')
+  hideAll()
+  showItems(create, createHeader, createIcon)
+})
+
+function hideAll() {
+  create.classList.add('d-none')
   bookmarks.classList.add('d-none')
   home.classList.add('d-none')
   profile.classList.add('d-none')
 
   homeHeader.classList.add('d-none')
   bookmarksHeader.classList.add('d-none')
-  createHeader.classList.remove('d-none')
+  createHeader.classList.add('d-none')
   profileHeader.classList.add('d-none')
 
   homeIcon.classList.remove('navigation__icon--active')
   bookmarksIcon.classList.remove('navigation__icon--active')
-  createIcon.classList.add('navigation__icon--active')
+  createIcon.classList.remove('navigation__icon--active')
   profileIcon.classList.remove('navigation__icon--active')
-})
+}
+
+function showItems(content, header, icon) {
+  content.classList.remove('d-none')
+  header.classList.remove('d-none')
+  icon.classList.add('navigation__icon--active')
+}
 
 profileNav.addEventListener('click', () => {
   create.classList.add('d-none')
@@ -97,6 +113,18 @@ bookmarkIcon.addEventListener('click', () => {
   bookmarkIcon.classList.toggle('card__bookmark-icon--active')
 })
 
-answerButton.addEventListener('click', () => {
-  answer.classList.toggle('d-none')
+submitButton.addEventListener('click', () => {
+  formField.reset()
+})
+
+showButton.addEventListener('click', () => {
+  hideButton.classList.remove('d-none')
+  showButton.classList.add('d-none')
+  answer.classList.remove('d-none')
+})
+
+hideButton.addEventListener('click', () => {
+  hideButton.classList.add('d-none')
+  showButton.classList.remove('d-none')
+  answer.classList.add('d-none')
 })
