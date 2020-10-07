@@ -23,7 +23,12 @@ const profileIcon = document.querySelector('[data-js=profile-icon]')
 const bookmarkIcon = document.querySelector('[data-js=bookmark-icon')
 
 const answer = document.querySelector('[data-js=answer]')
-const answerButton = document.querySelector('[data-js=answer-button]')
+
+const formField = document.querySelector('textarea')
+const submitButton = document.querySelector('[data-js=submit-button]')
+
+const showButton = document.querySelector('[data-js=show-button]')
+const hideButton = document.querySelector('[data-js=hide-button]')
 
 homeNav.addEventListener('click', () => {
   bookmarks.classList.add('d-none')
@@ -97,6 +102,14 @@ bookmarkIcon.addEventListener('click', () => {
   bookmarkIcon.classList.toggle('card__bookmark-icon--active')
 })
 
-answerButton.addEventListener('click', () => {
-  answer.classList.toggle('d-none')
+showButton.addEventListener('click', () => {
+  hideButton.classList.remove('d-none')
+  showButton.classList.add('d-none')
+  answer.classList.remove('d-none')
+})
+
+hideButton.addEventListener('click', () => {
+  hideButton.classList.add('d-none')
+  showButton.classList.remove('d-none')
+  answer.classList.add('d-none')
 })

@@ -41,7 +41,9 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
-        <button class="button" data-js="answer-button">Show Answer</button>
+        <button data-js="show-button" class="button">Show Answer</button>
+        <button data-js="hide-button" class="button d-none">Hide Answer</button>
+
         <p class="card__text d-none" data-js="answer">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
@@ -69,6 +71,7 @@
           Exercitationem non, architecto commodi quod id asper?
         </p>
         <button class="button">Show Answer</button>
+
         <p class="card__text d-none">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
@@ -200,6 +203,7 @@
           placeat, reiciendis natus dolor!</label
         >
         <textarea
+          data-js="text-area"
           class="form__text-input"
           name="textarea1"
           id="textarea1"
@@ -213,6 +217,7 @@
           placeat, reiciendis natus dolor!</label
         >
         <textarea
+          data-js="text-area"
           class="form__text-input"
           name="textarea2"
           id="textarea2"
@@ -233,7 +238,12 @@
           required
         />
 
-        <input class="button" type="submit" value="Submit" />
+        <input
+          class="button"
+          type="submit"
+          value="Submit"
+          data-js="submit-button"
+        />
       </form>
     </main>
     <!--========================================Profile--------------------------------------------->
