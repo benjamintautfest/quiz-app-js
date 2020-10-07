@@ -20,6 +20,8 @@ const bookmarksIcon = document.querySelector('[data-js=bookmarks-icon]')
 const createIcon = document.querySelector('[data-js=create-icon]')
 const profileIcon = document.querySelector('[data-js=profile-icon]')
 
+const bookmarkIcon = document.querySelector('[data-js=bookmark-icon')
+
 homeNav.addEventListener('click', () => {
   bookmarks.classList.add('d-none')
   home.classList.remove('d-none')
@@ -86,4 +88,8 @@ profileNav.addEventListener('click', () => {
   bookmarksIcon.classList.remove('navigation__icon--active')
   createIcon.classList.remove('navigation__icon--active')
   profileIcon.classList.add('navigation__icon--active')
+})
+
+bookmarkIcon.addEventListener('click', () => {
+  bookmarkIcon.classList.toggle('card__bookmark-icon--active')
 })
