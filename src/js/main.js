@@ -22,6 +22,9 @@ const profileIcon = document.querySelector('[data-js=profile-icon]')
 
 const bookmarkIcon = document.querySelector('[data-js=bookmark-icon')
 
+const answer = document.querySelector('[data-js=answer]')
+const answerButton = document.querySelector('[data-js=answer-button]')
+
 homeNav.addEventListener('click', () => {
   bookmarks.classList.add('d-none')
   home.classList.remove('d-none')
@@ -92,4 +95,8 @@ profileNav.addEventListener('click', () => {
 
 bookmarkIcon.addEventListener('click', () => {
   bookmarkIcon.classList.toggle('card__bookmark-icon--active')
+})
+
+answerButton.addEventListener('click', () => {
+  answer.classList.toggle('d-none')
 })
