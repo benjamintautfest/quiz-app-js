@@ -25,48 +25,28 @@ const bookmarkIcon = document.querySelector('[data-js=bookmark-icon')
 const answer = document.querySelector('[data-js=answer]')
 
 const formField = document.querySelector('textarea')
-const submitButton = document.querySelector('[data-js=submit-button]')
 
 const showButton = document.querySelector('[data-js=show-button]')
 const hideButton = document.querySelector('[data-js=hide-button]')
 
 homeNav.addEventListener('click', () => {
-  bookmarks.classList.add('d-none')
-  home.classList.remove('d-none')
-  create.classList.add('d-none')
-  profile.classList.add('d-none')
-
-  homeHeader.classList.remove('d-none')
-  bookmarksHeader.classList.add('d-none')
-  createHeader.classList.add('d-none')
-  profileHeader.classList.add('d-none')
-
-  homeIcon.classList.add('navigation__icon--active')
-  bookmarksIcon.classList.remove('navigation__icon--active')
-  createIcon.classList.remove('navigation__icon--active')
-  profileIcon.classList.remove('navigation__icon--active')
+  hideAll()
+  showItems(home, homeHeader, homeIcon)
 })
 
 bookMarkNav.addEventListener('click', () => {
-  bookmarks.classList.remove('d-none')
-  home.classList.add('d-none')
-  create.classList.add('d-none')
-  profile.classList.add('d-none')
-
-  homeHeader.classList.add('d-none')
-  bookmarksHeader.classList.remove('d-none')
-  createHeader.classList.add('d-none')
-  profileHeader.classList.add('d-none')
-
-  homeIcon.classList.remove('navigation__icon--active')
-  bookmarksIcon.classList.add('navigation__icon--active')
-  createIcon.classList.remove('navigation__icon--active')
-  profileIcon.classList.remove('navigation__icon--active')
+  hideAll()
+  showItems(bookmarks, bookmarksHeader, bookmarksIcon)
 })
 
 createNav.addEventListener('click', () => {
   hideAll()
   showItems(create, createHeader, createIcon)
+})
+
+profileNav.addEventListener('click', () => {
+  hideAll()
+  showItems(profile, profileHeader, profileIcon)
 })
 
 function hideAll() {
@@ -92,29 +72,8 @@ function showItems(content, header, icon) {
   icon.classList.add('navigation__icon--active')
 }
 
-profileNav.addEventListener('click', () => {
-  create.classList.add('d-none')
-  bookmarks.classList.add('d-none')
-  home.classList.add('d-none')
-  profile.classList.remove('d-none')
-
-  homeHeader.classList.add('d-none')
-  bookmarksHeader.classList.add('d-none')
-  createHeader.classList.add('d-none')
-  profileHeader.classList.remove('d-none')
-
-  homeIcon.classList.remove('navigation__icon--active')
-  bookmarksIcon.classList.remove('navigation__icon--active')
-  createIcon.classList.remove('navigation__icon--active')
-  profileIcon.classList.add('navigation__icon--active')
-})
-
 bookmarkIcon.addEventListener('click', () => {
   bookmarkIcon.classList.toggle('card__bookmark-icon--active')
-})
-
-submitButton.addEventListener('click', () => {
-  formField.reset()
 })
 
 showButton.addEventListener('click', () => {
