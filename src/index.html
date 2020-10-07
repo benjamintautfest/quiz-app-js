@@ -139,6 +139,7 @@
       <section class="card" class="mrg-top-20">
         <h2 class="card__title">Question:</h2>
         <svg
+          data-js="bookmark"
           class="card__bookmark-icon card__bookmark-icon--active"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -263,9 +264,13 @@
     </main>
 
     <footer class="navigation d-none">
-      <button class="navigation__link center" data-js="home-nav">
+      <button
+        class="navigation__link center navigation__button"
+        data-js="home-nav"
+      >
         <svg
-          class="navigation__icon navigation__icon--active"
+          data-js="home-icon"
+          class="navigation__icon navigation__icon"
           alt="home"
           ;
           xmlns="http://www.w3.org/2000/svg"
@@ -275,8 +280,12 @@
         </svg>
       </button>
 
-      <button class="navigation__link center" data-js="bookmarks-nav">
+      <button
+        class="navigation__link center navigation__button"
+        data-js="bookmarks-nav"
+      >
         <svg
+          data-js="bookmarks-icon"
           class="navigation__icon"
           alt="bookmarks"
           xmlns="http://www.w3.org/2000/svg"
@@ -287,8 +296,13 @@
           />
         </svg>
       </button>
-      <button class="navigation__link center" href="" data-js="create-nav">
+      <button
+        class="navigation__link center navigation__button"
+        href=""
+        data-js="create-nav"
+      >
         <svg
+          data-js="create-icon"
           class="navigation__icon"
           alt="create"
           xmlns="http://www.w3.org/2000/svg"
@@ -299,8 +313,13 @@
           />
         </svg>
       </button>
-      <button class="navigation__link center" href="" data-js="profile-nav">
+      <button
+        class="navigation__link center navigation__button"
+        href=""
+        data-js="profile-nav"
+      >
         <svg
+          data-js="profile-icon"
           class="navigation__icon"
           alt="profile"
           xmlns="http://www.w3.org/2000/svg"

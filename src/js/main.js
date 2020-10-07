@@ -15,6 +15,11 @@ const bookmarks = document.querySelector('[data-js=bookmarks]')
 const create = document.querySelector('[data-js=create]')
 const profile = document.querySelector('[data-js=profile]')
 
+const homeIcon = document.querySelector('[data-js=home-icon]')
+const bookmarksIcon = document.querySelector('[data-js=bookmarks-icon]')
+const createIcon = document.querySelector('[data-js=create-icon]')
+const profileIcon = document.querySelector('[data-js=profile-icon]')
+
 homeNav.addEventListener('click', () => {
   bookmarks.classList.add('d-none')
   home.classList.remove('d-none')
@@ -25,6 +30,11 @@ homeNav.addEventListener('click', () => {
   bookmarksHeader.classList.add('d-none')
   createHeader.classList.add('d-none')
   profileHeader.classList.add('d-none')
+
+  homeIcon.classList.add('navigation__icon--active')
+  bookmarksIcon.classList.remove('navigation__icon--active')
+  createIcon.classList.remove('navigation__icon--active')
+  profileIcon.classList.remove('navigation__icon--active')
 })
 
 bookMarkNav.addEventListener('click', () => {
@@ -37,6 +47,11 @@ bookMarkNav.addEventListener('click', () => {
   bookmarksHeader.classList.remove('d-none')
   createHeader.classList.add('d-none')
   profileHeader.classList.add('d-none')
+
+  homeIcon.classList.remove('navigation__icon--active')
+  bookmarksIcon.classList.add('navigation__icon--active')
+  createIcon.classList.remove('navigation__icon--active')
+  profileIcon.classList.remove('navigation__icon--active')
 })
 
 createNav.addEventListener('click', () => {
@@ -49,6 +64,11 @@ createNav.addEventListener('click', () => {
   bookmarksHeader.classList.add('d-none')
   createHeader.classList.remove('d-none')
   profileHeader.classList.add('d-none')
+
+  homeIcon.classList.remove('navigation__icon--active')
+  bookmarksIcon.classList.remove('navigation__icon--active')
+  createIcon.classList.add('navigation__icon--active')
+  profileIcon.classList.remove('navigation__icon--active')
 })
 
 profileNav.addEventListener('click', () => {
@@ -61,4 +81,9 @@ profileNav.addEventListener('click', () => {
   bookmarksHeader.classList.add('d-none')
   createHeader.classList.add('d-none')
   profileHeader.classList.remove('d-none')
+
+  homeIcon.classList.remove('navigation__icon--active')
+  bookmarksIcon.classList.remove('navigation__icon--active')
+  createIcon.classList.remove('navigation__icon--active')
+  profileIcon.classList.add('navigation__icon--active')
 })
