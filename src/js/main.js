@@ -1,31 +1,33 @@
-const homeNav = getModule('home-nav')
-const bookMarkNav = getModule('bookmarks-nav')
-const createNav = getModule('create-nav')
-const profileNav = getModule('profile-nav')
+import { getDataJs } from './lib'
 
-const homeHeader = getModule('home-header')
-const bookmarksHeader = getModule('bookmarks-header')
-const createHeader = getModule('create-header')
-const profileHeader = getModule('profile-header')
+const homeNav = getDataJs('home-nav')
+const bookMarkNav = getDataJs('bookmarks-nav')
+const createNav = getDataJs('create-nav')
+const profileNav = getDataJs('profile-nav')
 
-const home = getModule('home')
-const bookmarks = getModule('bookmarks')
-const create = getModule('create')
-const profile = getModule('profile')
+const homeHeader = getDataJs('home-header')
+const bookmarksHeader = getDataJs('bookmarks-header')
+const createHeader = getDataJs('create-header')
+const profileHeader = getDataJs('profile-header')
 
-const homeIcon = getModule('home-icon')
-const bookmarksIcon = getModule('bookmarks-icon')
-const createIcon = getModule('create-icon')
-const profileIcon = getModule('profile-icon')
+const home = getDataJs('home')
+const bookmarks = getDataJs('bookmarks')
+const create = getDataJs('create')
+const profile = getDataJs('profile')
 
-const bookmarkIcon = getModule('bookmark-icon')
+const homeIcon = getDataJs('home-icon')
+const bookmarksIcon = getDataJs('bookmarks-icon')
+const createIcon = getDataJs('create-icon')
+const profileIcon = getDataJs('profile-icon')
 
-const answer = getModule('answer')
+const bookmarkIcon = getDataJs('bookmark-icon')
 
-const formField = getModule('textarea')
+const answer = getDataJs('answer')
 
-const showButton = getModule('show-button')
-const hideButton = getModule('hide-button')
+const formField = getDataJs('textarea')
+
+const showButton = getDataJs('show-button')
+const hideButton = getDataJs('hide-button')
 
 homeNav.addEventListener('click', () => {
   hideAll()
@@ -84,9 +86,4 @@ function showItems(content, header, icon) {
   content.classList.remove('d-none')
   header.classList.remove('d-none')
   icon.classList.add('navigation__icon--active')
-}
-
-function getModule(name) {
-  const selector = document.querySelector(`[data-js=${name}]`)
-  return selector
 }
