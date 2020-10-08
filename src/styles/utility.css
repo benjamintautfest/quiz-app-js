@@ -11,3 +11,8 @@
 .d-none {
   display: none;
 }
+
+.nightmode {
+  background: darkslategrey;
+  color: white;
+}
