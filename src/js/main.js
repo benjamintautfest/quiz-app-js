@@ -49,6 +49,22 @@ profileNav.addEventListener('click', () => {
   showItems(profile, profileHeader, profileIcon)
 })
 
+bookmarkIcon.addEventListener('click', () => {
+  bookmarkIcon.classList.toggle('card__bookmark-icon--active')
+})
+
+showButton.addEventListener('click', () => {
+  hideButton.classList.remove('d-none')
+  showButton.classList.add('d-none')
+  answer.classList.remove('d-none')
+})
+
+hideButton.addEventListener('click', () => {
+  hideButton.classList.add('d-none')
+  showButton.classList.remove('d-none')
+  answer.classList.add('d-none')
+})
+
 function hideAll() {
   create.classList.add('d-none')
   bookmarks.classList.add('d-none')
@@ -71,19 +87,3 @@ function showItems(content, header, icon) {
   header.classList.remove('d-none')
   icon.classList.add('navigation__icon--active')
 }
-
-bookmarkIcon.addEventListener('click', () => {
-  bookmarkIcon.classList.toggle('card__bookmark-icon--active')
-})
-
-showButton.addEventListener('click', () => {
-  hideButton.classList.remove('d-none')
-  showButton.classList.add('d-none')
-  answer.classList.remove('d-none')
-})
-
-hideButton.addEventListener('click', () => {
-  hideButton.classList.add('d-none')
-  showButton.classList.remove('d-none')
-  answer.classList.add('d-none')
-})
