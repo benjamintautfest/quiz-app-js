@@ -1,33 +1,31 @@
-console.log('Hallo, du da ')
+const homeNav = getModule('home-nav')
+const bookMarkNav = getModule('bookmarks-nav')
+const createNav = getModule('create-nav')
+const profileNav = getModule('profile-nav')
 
-const homeNav = document.querySelector('[data-js=home-nav]')
-const bookMarkNav = document.querySelector('[data-js=bookmarks-nav]')
-const createNav = document.querySelector('[data-js=create-nav]')
-const profileNav = document.querySelector('[data-js=profile-nav]')
+const homeHeader = getModule('home-header')
+const bookmarksHeader = getModule('bookmarks-header')
+const createHeader = getModule('create-header')
+const profileHeader = getModule('profile-header')
 
-const homeHeader = document.querySelector('[data-js=home-header]')
-const bookmarksHeader = document.querySelector('[data-js=bookmarks-header]')
-const createHeader = document.querySelector('[data-js=create-header]')
-const profileHeader = document.querySelector('[data-js=profile-header]')
+const home = getModule('home')
+const bookmarks = getModule('bookmarks')
+const create = getModule('create')
+const profile = getModule('profile')
 
-const home = document.querySelector('[data-js=home]')
-const bookmarks = document.querySelector('[data-js=bookmarks]')
-const create = document.querySelector('[data-js=create]')
-const profile = document.querySelector('[data-js=profile]')
+const homeIcon = getModule('home-icon')
+const bookmarksIcon = getModule('bookmarks-icon')
+const createIcon = getModule('create-icon')
+const profileIcon = getModule('profile-icon')
 
-const homeIcon = document.querySelector('[data-js=home-icon]')
-const bookmarksIcon = document.querySelector('[data-js=bookmarks-icon]')
-const createIcon = document.querySelector('[data-js=create-icon]')
-const profileIcon = document.querySelector('[data-js=profile-icon]')
+const bookmarkIcon = getModule('bookmark-icon')
 
-const bookmarkIcon = document.querySelector('[data-js=bookmark-icon')
+const answer = getModule('answer')
 
-const answer = document.querySelector('[data-js=answer]')
+const formField = getModule('textarea')
 
-const formField = document.querySelector('textarea')
-
-const showButton = document.querySelector('[data-js=show-button]')
-const hideButton = document.querySelector('[data-js=hide-button]')
+const showButton = getModule('show-button')
+const hideButton = getModule('hide-button')
 
 homeNav.addEventListener('click', () => {
   hideAll()
@@ -86,4 +84,9 @@ function showItems(content, header, icon) {
   content.classList.remove('d-none')
   header.classList.remove('d-none')
   icon.classList.add('navigation__icon--active')
+}
+
+function getModule(name) {
+  const selector = document.querySelector(`[data-js=${name}]`)
+  return selector
 }
