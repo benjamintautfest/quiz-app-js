@@ -1,4 +1,6 @@
 import { getDataJs } from './lib'
+import { getAllDataJs } from './lib'
+
 
 export default function setupNavigation(){
 
