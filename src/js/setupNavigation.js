@@ -24,7 +24,7 @@ function changePage(event) {
     })
 
     navButtons.forEach(navBtn => {
-        navBtn.classList.toggle('.navigation__icon--active', navBtn === clickedNavButton)
+        navBtn.classList.toggle('navigation__icon--active', navBtn === clickedNavButton)
     })
 
     header.textContent = targetPage
