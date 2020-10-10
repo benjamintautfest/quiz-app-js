@@ -12,7 +12,7 @@ export default function setupBookmarks () {
     }
 
     function toggleBookmarkIcon(event){
-        event.target.classList.toggle('card__bookmark-icon--active')
+        event.currentTarget.classList.toggle('card__bookmark-icon--active')
     }
 
    
