@@ -6,6 +6,7 @@ export default function setupNavigation() {
 
 const navButtons = getAllDataJs('nav-button')
 const pages = getAllDataJs('page')
+const header = getDataJs('header')
 
 navButtons.forEach(getNavButton)
 
@@ -25,6 +26,8 @@ function changePage(event) {
     navButtons.forEach(navBtn => {
         navBtn.classList.toggle('.navigation__icon--active', navBtn === clickedNavButton)
     })
+
+    header.textContent = targetPage
 
     console.log('löpt')
 
